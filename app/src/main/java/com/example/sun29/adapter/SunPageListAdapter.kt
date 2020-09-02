@@ -56,6 +56,7 @@ class SunPageListAdapter : ListAdapter<SunUser, SunPageListAdapter.SunMyViewHold
         Glide.with(holder.itemView)
             .load(imgUrl)
             .placeholder(R.drawable.ic_launcher_background)
+            //.fitCenter()
             .listener(object : RequestListener<Drawable>{  //说明：这里的 Drawable 固定就好，一个类
                 override fun onLoadFailed(
                     e: GlideException?,

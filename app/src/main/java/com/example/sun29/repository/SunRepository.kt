@@ -53,7 +53,7 @@ class SunRepository(private val SunUserDao: SunUserDao) {
                     var i=1
                     for (cursor in animals.hits){
                         //println("Jessice:"+i+"------"+cursor.largeImageURL)
-                        insert(SunUser(i, cursor.largeImageURL))
+                        insert(SunUser(i, cursor.previewURL))
                         //item = item.map(SunUser(i, cursor.largeImageURL))
                         i++
                     }

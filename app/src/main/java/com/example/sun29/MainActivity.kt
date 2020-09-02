@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.sun29.adapter.SunPageListAdapter
 import com.example.sun29.data.viewmodel.MyViewModel
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         sun_list_item_Recyclerview_id.apply {
             adapter = adapterxd
             // fragment 中 context 替换为 requireContext()
-            layoutManager = GridLayoutManager(context,2)  //2代替两列
+            //layoutManager = GridLayoutManager(context,2)  //整齐两列
+            layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)  //不整齐两列
         }
 
         /**
